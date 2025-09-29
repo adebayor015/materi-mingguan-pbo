@@ -1,42 +1,86 @@
+<?php
+$home = [
+  "judul" => "Selamat Datang di Website Kami",
+  "deskripsi" => "Ini adalah halaman home yang menampilkan informasi singkat, dan sedikit kisah kita. Semoga kalian suka dengan Website ini.",
+  "link" => "#",
+  "tombol" => "Pelajari Lebih Lanjut"
+];
+?>
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     <title>TI UNIMUS | HOME</title>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        background: url('images/abstract.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+      footer {
+        background-color: #0c424a;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+      }
+      .nav-link {
+        color: white !important;
+        font-weight: 500;
+      }
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
+
   <body>
-    <ul class="nav justify-content-center "style="background-color: #061724ff;">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">berita</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">profil</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link " href="#">kontak</a>
-  </li>
-</ul>
+    <!-- Menu -->
+    <ul class="nav justify-content-center" style="background-color: #0c424aff;">
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="berita">Berita</a></li>
+      <li class="nav-item"><a class="nav-link" href="profile">Profil</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact">Kontak</a></li>
+    </ul>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Konten Utama -->
+    <main>
+      <section class="hero">
+        <h1><?php echo $home['judul']; ?></h1>
+        <p><?php echo $home['deskripsi']; ?></p>
+        <a href="<?php echo $home['link']; ?>" class="btn btn-primary">
+          <?php echo $home['tombol']; ?>
+        </a>
+      </section>
+    </main>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer>
+      &copy; <?php echo date("Y"); ?> TI UNIMUS. All Rights Reserved.
+    </footer>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
