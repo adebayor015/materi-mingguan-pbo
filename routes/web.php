@@ -22,8 +22,8 @@ Route::get('/berita/{id}', function ($id) {
             "judul" => "Persija Jakarta Kalahkan PSM Makassar 2-1 di Kandang",
             "tanggal" => "29 September 2025",
             "gambar" => "https://tse3.mm.bing.net/th/id/OIF.MPuhRQdjJePOJFthm7qCpA?pid=Api&P=0&h=220",
-            "isi" => "Dalam pertandingan yang berlangsung sengit di Stadion Gelora Bung Karno, Persija Jakarta berhasil mengalahkan PSM Makassar dengan skor 2-1. 
-                      Gol pertama dicetak oleh PSM pada menit ke-32 melalui sundulan Yakob Sayuri. Namun, Persija berhasil menyamakan kedudukan lewat tendangan jarak jauh Riko Simanjuntak pada menit ke-60. 
+            "isi" => "Dalam pertandingan yang berlangsung sengit dan panas di Stadion Gelora Bung Karno, Persija Jakarta berhasil mengalahkan PSM Makassar dengan skor 2-1. 
+                      Gol pertama dicetak oleh PSM pada menit ke-32 melalui sundulan Yakob Sayuri yang sangat menukik. Namun, Persija berhasil menyamakan kedudukan lewat tendangan jarak jauh Riko Simanjuntak pada menit ke-60. 
                       Menjelang akhir laga, Marko Simic mencetak gol penentu kemenangan melalui titik penalti pada menit ke-85. 
                       Dengan hasil ini, Persija naik ke peringkat ke-4 klasemen sementara Liga 1 Indonesia musim 2025/2026."
         ],
