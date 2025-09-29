@@ -1,7 +1,7 @@
 <?php
 $home = [
   "judul" => "Selamat Datang di Website Kami",
-  "deskripsi" => "Ini adalah halaman home yang menampilkan informasi singkat, dan sedikit kisah kita. Semoga kalian suka dengan Website ini.",
+  "deskripsi" => "Ini adalah halaman home yang menampilkan informasi singkat, dan sedikit kisah kita. Semoga kalian suka dengan Website ini, harus suka sih soalnya ini maksa.",
   "link" => "#",
   "tombol" => "Pelajari Lebih Lanjut"
 ];
