@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Berita;  
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,31 +21,24 @@ Route::get('/profile', function () {
 
 Route::get('/berita', function () {
 
-    $data_berita = [
-        [
-            "judul" => "newss 1",
-            "penulis" => "anjo",
-            "konten" => "pembunuhan tanpa busana daerah ciliwangi",
-        ],
-        [
-            "judul" => "newss 2",
-            "penulis" => "jamno",
-            "konten" => "menangis meratapi nasib, seorang pemuda ditemukan sedang melahirkan disekitar lampu merah ciliwung",
-        ],
-        [
-            "judul" => "newss 3",
-            "penulis" => "pukime",
-            "konten" => "munaroh menikami",
-        ],
-    ];
+    
     return view('berita', [
         "title" => "berita",
-        "berita" => $data_berita,
+        "beritas" => Berita ::ambildata(),
     ]);
 });
 
+Route::get('/berita/{slug}', function ($slugp) {
+    
+   
+    return view('singleberita', [
+        "title" => "berita",
+        "new_berita" => Berita ::caridata($slugp),
+    ]);
+});
 Route::get('/contact', function () {
     return view('contact', [
         "title" => "contact",
+        
     ]);
 });
