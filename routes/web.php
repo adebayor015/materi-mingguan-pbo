@@ -27,7 +27,7 @@ Route::get('/berita', [BeritaController::class,'index']);
 
 Route::get('/berita/{slug}', [BeritaController::class, 'phptampildata']); 
 
-Route::get('/mahasiswa', [MahasiswaController::class,'index']);
+Route::get('/mahasiswa', [MahasiswaController::class,'index'])->name('mahasiswa');
 
 
 Route::get('/contact', function () {
