@@ -3,8 +3,14 @@
 @section('content')
 <h1 class="text-centre">Data Mahasiswa</h1>
     <div class="row">
-        
+
+        <a href="/tambahmahasiswa">
         <button type="button" class="btn btn-success">Tambah</button>
+        </a>
+        @if (message = Session::get('success'))
+          <div class="alert alert-success" role="alert">
+            {{$message}}
+          </div>
         <table class="table">
   <thead>
     <tr>
@@ -28,7 +34,7 @@
       <td>{{$mahasiswa ["nim"]}}</td>
       <td>{{$mahasiswa ["prodi"]}}</td>
       <td>{{$mahasiswa ["email"]}}</td>
-      <td>{{$mahasiswa ["nohp"]}}7</td>
+      <td>{{$mahasiswa ["nohp"]}}</td>
       <td>
       <button type="button" class="btn btn-primary">Edit</button>
       <button type="button" class="btn btn-danger">Hapus</button>
