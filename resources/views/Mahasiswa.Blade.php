@@ -7,10 +7,11 @@
         <a href="/tambahmahasiswa">
         <button type="button" class="btn btn-success">Tambah</button>
         </a>
-        @if (message = Session::get('success'))
+        @if ($message = Session::get('success'))
           <div class="alert alert-success" role="alert">
             {{$message}}
           </div>
+          @endif
         <table class="table">
   <thead>
     <tr>
@@ -36,13 +37,14 @@
       <td>{{$mahasiswa ["email"]}}</td>
       <td>{{$mahasiswa ["nohp"]}}</td>
       <td>
-      <button type="button" class="btn btn-primary">Edit</button>
-      <button type="button" class="btn btn-danger">Hapus</button>
+             <a href="tampildata/{{$mahasiswa['id']}}" class="btn btn-primary">Edit</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
       </td>
       <?php $i++; ?>
     </tr>
+    
     @endforeach
   </tbody>
 </table>
     </div>
-@endsection
+   @endsection
