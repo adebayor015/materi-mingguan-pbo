@@ -4,7 +4,8 @@
 <h1>berita</h1>
 @foreach ( $beritas as $berita )
 <article class="mb-5">
-    <a href="/berita/{{ $berita['slug'] }}">
+    <a href="{{ route('tampildata', $berita['slug']) }}">
+
     <h2>{{ $berita['judul'] }}</h2>
     </a>
     <h3>{{ $berita['penulis'] }}</h3>
